@@ -25,12 +25,12 @@ class BeautyShopMixin:
             print(f'The shop is open')
 
 # 14.9
-class House(BeautyShopMixin):
-    def __init__(self, open_time, close_time):
+class House(BeautyShopMixin, BigHouse):
+    def __init__(self,flast, open_time, close_time):
         super(House, self).__init__(open_time, close_time)
 
 if __name__ == '__main__':
-    hws = House(10, 22)
+    hws = House(5, 10, 22)
     print(hws.__dict__)
     hws.shop_working(13)
 
